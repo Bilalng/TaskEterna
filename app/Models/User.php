@@ -29,4 +29,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function licens()
+    {
+        return $this->hasMany(Licens::class);
+    }
+
 }
