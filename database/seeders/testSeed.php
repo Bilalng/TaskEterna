@@ -31,16 +31,21 @@ class testSeed extends Seeder
         Product::create([
             'title' => 'Windows',
             'description' => 'Windows Etkinleştirme Anahatarı',
-            'stock_state' => 10,
+            'avaliable_stock' => 10,
         ]);
         Product::create([
             'title' => 'Microsoft 365',
             'description' => 'Microsoft Etkinleştirme Anahatarı',
-            'stock_state' => 10,
+            'avaliable_stock' => 10,
         ]);
 
         Licens::create([
-            'key' => Str::random();
+            'key' => Str::random(),
+            'product_id' => 1,
+        ]);
+         Licens::create([
+            'key' => Str::random(),
+            'product_id' => 1,
         ]);
     }
 }

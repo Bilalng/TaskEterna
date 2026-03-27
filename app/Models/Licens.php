@@ -8,6 +8,8 @@ class Licens extends Model
 {
     protected $fillable = ['key'];
 
+    public $timestamps = false;
+
     public function product()
     {
         return $this->belongsTo(Product::class);
