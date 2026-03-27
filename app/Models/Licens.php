@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Licens extends Model
 {
-    protected $fillable = ['key'];
+    protected $fillable = ['key','user_id','product_id'];
 
     public $timestamps = false;
 

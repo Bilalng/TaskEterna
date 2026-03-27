@@ -9,12 +9,13 @@ class UserController extends Controller
 {
     protected $userService;
 
-    public function __constructer(UserInterface $userService)
+    public function __construct(UserInterface $userService)
     {
         $this->userService = $userService;
     }
     public function index()
     {
+        
         $user = $this->userService->getUser();
         if (!$user) {
             return response()->json([
@@ -27,5 +28,6 @@ class UserController extends Controller
             'status' => 'success',
             'data' => $user
         ], 200);
+
     }
 }

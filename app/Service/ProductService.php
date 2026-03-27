@@ -7,14 +7,14 @@ class ProductService implements ProductInterface
 {
     public function getProduct()
     {
-        Product::with('licens:user_id')->where('licens:user_id', '=', null)->chunk(100, function ($products) {
+
+        Product::with('licens')->chunk(100, function ($products) {
             foreach ($products as $product) {
-                if($product->licens->user_id === null){
-                return $product;
+                if ($product->licens->user_id === null) {
+                    return $product;
                 }
             }
 
         });
-
     }
 }

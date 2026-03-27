@@ -7,6 +7,6 @@ class UserService implements UserInterface
 {
     public function getUser()
     {
-            return User::query()->paginate(10);
+            return User::all();
     }
 }
