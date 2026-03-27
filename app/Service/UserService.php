@@ -5,8 +5,8 @@ use App\Interface\UserInterface;
 use App\Models\User;
 class UserService implements UserInterface
 {
-    public function getAllUser()
+    public function getUser()
     {
-        return User::paginate(10);
+            return User::query()->paginate(10);
     }
 }

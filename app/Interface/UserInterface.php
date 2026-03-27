@@ -4,7 +4,7 @@ namespace App\Interface;
 
 interface UserInterface{
 
-    public function getAllUser();
+    public function getUser();
 
 }
 
